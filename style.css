@@ -1,0 +1,716 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0710;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, #35133d, #0b0710 70%);
+}
+
+
+.welcome-content {
+    padding: 30px;
+}
+
+
+.gift {
+    font-size: 90px;
+    animation: bounce 1.5s infinite;
+}
+
+
+.welcome h1 {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+
+.welcome p {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+button {
+    border: none;
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: #ff4fa3;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+    background: #ff2f91;
+}
+
+
+/* ================= GENERAL ================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+.section {
+    min-height: 80vh;
+
+    padding: 100px 8%;
+
+    text-align: center;
+}
+
+
+.section-label {
+    color: #ff65ae;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.section h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+.section-description {
+    color: #aaa;
+
+    margin-bottom: 50px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(circle at center,
+        #571c5c,
+        #0b0710 65%);
+}
+
+
+.small-title {
+    letter-spacing: 5px;
+
+    color: #ff75b7;
+
+    font-size: 13px;
+}
+
+
+.hero h1 {
+    font-size: clamp(60px, 12vw, 150px);
+
+    line-height: 0.85;
+
+    margin: 30px 0;
+
+    background: linear-gradient(
+        90deg,
+        #ff4fa3,
+        #ffb6df,
+        #ffffff
+    );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+.hero h2 {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero-text {
+    color: #bbb;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= BALLOONS ================= */
+
+.balloon {
+    position: fixed;
+
+    font-size: 45px;
+
+    z-index: 10;
+
+    animation: float 5s infinite ease-in-out;
+
+    pointer-events: none;
+}
+
+
+.balloon1 {
+    left: 5%;
+    top: 20%;
+}
+
+
+.balloon2 {
+    right: 5%;
+    top: 35%;
+}
+
+
+.balloon3 {
+    left: 10%;
+    bottom: 10%;
+}
+
+
+.balloon4 {
+    right: 10%;
+    bottom: 15%;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.memory-card {
+    background: #18121c;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    transition: 0.4s;
+
+    border: 1px solid #2d2232;
+}
+
+
+.memory-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #ff4fa3;
+}
+
+
+.memory-card img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.memory-card div {
+    padding: 20px;
+}
+
+
+.memory-card h3 {
+    margin-bottom: 8px;
+}
+
+
+.memory-card p {
+    color: #aaa;
+
+    line-height: 1.5;
+}
+
+
+/* ================= FRIENDSHIP ================= */
+
+.friendship {
+    background: #110b15;
+}
+
+
+.friendship-box {
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    padding: 50px;
+
+    background: #1b121d;
+
+    border-radius: 25px;
+
+    border: 1px solid #342239;
+}
+
+
+.friendship-box p {
+    color: #ccc;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.friendship-box h3 {
+    color: #ff69b0;
+
+    font-size: 25px;
+}
+
+
+/* ================= FACTS ================= */
+
+.facts {
+    max-width: 1000px;
+
+    margin: 50px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.fact {
+    background: #18121c;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    border: 1px solid #2d2232;
+
+    transition: 0.3s;
+}
+
+
+.fact:hover {
+    transform: translateY(-8px);
+
+    border-color: #ff4fa3;
+}
+
+
+.fact span {
+    font-size: 40px;
+}
+
+
+.fact h3 {
+    margin: 15px 0;
+}
+
+
+.fact p {
+    color: #999;
+
+    line-height: 1.5;
+}
+
+
+/* ================= MYSTERY BOX ================= */
+
+.mystery {
+    background: #110b15;
+}
+
+
+.boxes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin: 50px 0;
+}
+
+
+.box {
+    width: 120px;
+
+    height: 120px;
+
+    background: #231629;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 60px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.box:hover {
+    transform: translateY(-10px) rotate(3deg);
+
+    background: #3a1d3e;
+}
+
+
+.box-message {
+    font-size: 20px;
+
+    color: #ff72b7;
+
+    min-height: 30px;
+}
+
+
+/* ================= LETTER ================= */
+
+.letter-section {
+    min-height: 100vh;
+}
+
+
+.letter {
+    max-width: 800px;
+
+    margin: 40px auto 0;
+
+    background: #fff0f7;
+
+    color: #35152b;
+
+    padding: 45px;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+
+    animation: openLetter 0.7s ease;
+}
+
+
+.letter p {
+    margin-bottom: 20px;
+
+    line-height: 1.7;
+}
+
+
+.letter h3 {
+    margin: 20px 0;
+
+    color: #d92d81;
+}
+
+
+/* ================= CAKE ================= */
+
+.cake-section {
+    background:
+        radial-gradient(circle at center,
+        #35133d,
+        #0b0710 70%);
+}
+
+
+.cake {
+    margin: 60px auto 30px;
+
+    position: relative;
+
+    width: 200px;
+}
+
+
+.candle {
+    width: 20px;
+
+    height: 70px;
+
+    background: #ff73b5;
+
+    margin: auto;
+
+    border-radius: 5px;
+}
+
+
+#flame {
+    position: relative;
+
+    top: -35px;
+
+    font-size: 30px;
+
+    transition: 0.5s;
+}
+
+
+.cake-top {
+    width: 210px;
+
+    height: 30px;
+
+    background: #ff8cc5;
+
+    border-radius: 50%;
+
+    margin-top: 10px;
+}
+
+
+.cake-body {
+    width: 200px;
+
+    height: 100px;
+
+    background: #e8569b;
+
+    border-radius: 0 0 20px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 50px;
+}
+
+
+#finalMessage {
+    margin-top: 50px;
+
+    color: #ff69b0;
+
+    animation: pulse 1s infinite;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: #070509;
+}
+
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+
+footer p {
+    color: #888;
+
+    margin: 8px;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
+
+}
+
+
+@keyframes openLetter {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes pulse {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .welcome h1 {
+        font-size: 32px;
+    }
+
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+
+    .section {
+        padding: 80px 20px;
+    }
+
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .facts {
+        grid-template-columns: 1fr;
+    }
+
+
+    .memory-card img {
+        height: 250px;
+    }
+
+
+    .boxes {
+        gap: 15px;
+    }
+
+
+    .box {
+        width: 90px;
+
+        height: 90px;
+
+        font-size: 45px;
+    }
+
+
+    .letter {
+        padding: 30px 25px;
+    }
+
+
+    .balloon {
+        font-size: 30px;
+    }
+
+}
